@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TaskScheduler {
+public class taskScheduler {
 
     public static int leastInterval(char[] tasks, int n) {
         
@@ -46,6 +46,7 @@ public class TaskScheduler {
             } else {
                 System.out.println("Time " + time + ": IDLE");
             }
+            //just a dummy print statement to show the execution of tasks and idle times. In a real implementation, this contains the resources the cpu might want to share.
         }
 
         return time;
@@ -55,6 +56,8 @@ public class TaskScheduler {
             if (count > 0) return true;
         }
         return false;
+
+        //this function checks if there are any tasks left to execute by iterating through the frequency map and checking if any task has a count greater than zero. If it finds such a task, it returns true; otherwise, it returns false after checking all tasks.
     }
 
     public static void main(String[] args) {
@@ -63,5 +66,6 @@ public class TaskScheduler {
         char[] tasks1 = {'A','A','A','B','B','B'};
         int result1 = leastInterval(tasks1, 2);
         System.out.println("Total Time to execute all tasks: " + result1);
+        //Main function with test cases to demonstrate the functionality of the leastInterval method. It prints the tasks being executed at each time unit and the total time taken to execute all tasks.
     }
 }
